@@ -68,23 +68,23 @@ const App = () => {
         let lastSixMessages = chatLog.slice(-5);
         data.messages = constructMessages([...lastSixMessages, newQuestion]);
         setChatLog(prevLog => [...prevLog, newQuestion]);
-        // sendMessage(data)
-        // .then((result) => {
-        //     if(result.content) setChatLog(prevLog => [...prevLog, result.content]);
-        //     else if(result.error) setChatLog(prevLog => [...prevLog, result.error]);
-        //     else {
-        //         console.error("Error:", error);
-        //         setChatLog(prevLog => [...prevLog, "Error getting response"]);
-        //     }
-        // })
-        // .catch((error) => {
-        //     console.error("Error:", error);
-        //     setChatLog(prevLog => [...prevLog, "Error getting response"]);
-        // })
-        // .finally(() => {
-        //     setGettingResponse(false);
-        // })
-        setGettingResponse(false); //useful for testing, after commenting out above block
+        sendMessage(data)
+        .then((result) => {
+            if(result.content) setChatLog(prevLog => [...prevLog, result.content]);
+            else if(result.error) setChatLog(prevLog => [...prevLog, result.error]);
+            else {
+                console.error("Error:", error);
+                setChatLog(prevLog => [...prevLog, "Error getting response"]);
+            }
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+            setChatLog(prevLog => [...prevLog, "Error getting response"]);
+        })
+        .finally(() => {
+            setGettingResponse(false);
+        })
+        // setGettingResponse(false); //useful for testing, after commenting out above block
         };
     
     const handleKeyDown = (event) => {
