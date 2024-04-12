@@ -10,11 +10,11 @@ Built using PHP, React, and SCSS
 
 # Usage
 
-Zip of the contents of this repo and upload it to WordPress, like you would any other WordPress plugin. You can download a zip file directly from GitHub.
+Zip the contents of this repo and upload it to WordPress, like you would any other WordPress plugin. You can download a zip file directly from GitHub.
 
-In the settings page, you need to provide the API key, as well as the end of the URL of the PDF. The ChatPDF API key is given to you in the format of SEC_XXXX, and you can paste this verbatim into the API key field.
+In the settings page, you need to provide the API key, as well as the end of the URL of the PDF. The ChatPDF API key is given to you in the format of sec_xxxx, and you can paste this verbatim into the API key field.
 
-For the PDF key field, you must paste the part after the last slash when you have a PDF selected. The API documentation on the official instructs you to add a sha_ prefix to it, but the plugin will take care of that for you. Don't add it.
+For the PDF key field, you must paste the part after the last slash when you have a PDF selected. The API documentation on the official instructs you to add a cha_ prefix to it, but the plugin will take care of that for you. Don't add it.
 
 # Development
 
